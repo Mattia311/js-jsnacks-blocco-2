@@ -47,27 +47,27 @@ text.innerHTML = ('la bici con il peso minore è:' + JSON.stringify(filteredValu
 
 const squadre = [
     {
-        name: '',
+        name: 'milan',
         puntiFatti: 0,
         falliSubiti: 0
     },
     {
-        name: '',
+        name: 'inter',
         puntiFatti: 0,
         falliSubiti: 0
     },
     {
-        name: '',
+        name: 'lazio',
         puntiFatti: 0,
         falliSubiti: 0
     },
     {
-        name: '',
+        name: 'roma',
         puntiFatti: 0,
         falliSubiti: 0
     },
     {
-        name: '',
+        name: 'juve',
         puntiFatti: 0,
         falliSubiti: 0
     },
@@ -75,11 +75,27 @@ const squadre = [
 
 console.log(squadre);
 
-squadre[0].name = 'milan'
-squadre[1].name = 'inter'
-squadre[2].name = 'lazio'
-squadre[3].name = 'roma'
-squadre[4].name = 'juve'
+
+//Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
+
+function numeriRand () {
+    let numRandom = Math.floor(Math.random() * 20) + 1
+    
+    return numRandom
+}   
+numeriRand()
+
+
+squadre[0].puntiFatti = numeriRand()
+squadre[0].falliSubiti = numeriRand()
+squadre[1].puntiFatti = numeriRand()
+squadre[1].falliSubiti = numeriRand()
+squadre[2].puntiFatti = numeriRand()
+squadre[2].falliSubiti = numeriRand()
+squadre[3].puntiFatti = numeriRand()
+squadre[3].falliSubiti = numeriRand()
+squadre[4].puntiFatti = numeriRand()
+squadre[4].falliSubiti = numeriRand()
 console.log(squadre);
 
 
