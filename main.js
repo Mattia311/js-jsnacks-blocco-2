@@ -1,103 +1,44 @@
-//Creare un array di oggetti: ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare a schermo la bici con peso minore.
 
 
-/*const text = document.getElementById('output')
 
+
+
+
+// quarto snack
+//Creare un array di oggetti:
+//Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+//Stampare a schermo la bici con peso minore utilizzando foreach
+
+const text = document.getElementById('output')
 const bici = [
     {
-        name: 'audi',
-        peso: 20,
+        nome: 'bmw',
+        peso: 50
     },
     {
-        name: 'bmw',
-        peso: 25,
+        nome: 'ferra',
+        peso: 34
     },
     {
-        name: 'panda',
-        peso: 15,
+        nome: 'lambo',
+        peso: 30
     },
     {
-        name: 'ferrari',
-        peso: 30,
+        nome: 'gt',
+        peso: 60
     },
     {
-        name: 'lambo',
-        peso: 35,
-    },
+        nome: 'hbm',
+        peso: 12
+    }
 ]
 
-
-var filteredValue = bici.filter(function (item) {
-    return item.name == "panda" && item.peso < 20;
-});
-console.log(JSON.stringify(filteredValue))
-
-text.innerHTML = ('la bici con il peso minore è:' + JSON.stringify(filteredValue));*/
-
-
-
-
-
-
-
-
-
-//Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti e falli subiti. Nome sarà l’unica proprietà da compilare, mentre le altre saranno tutte settate a 0.
-
-
-const squadre = [
-    {
-        name: 'milan',
-        puntiFatti: 0,
-        falliSubiti: 0
-    },
-    {
-        name: 'inter',
-        puntiFatti: 0,
-        falliSubiti: 0
-    },
-    {
-        name: 'lazio',
-        puntiFatti: 0,
-        falliSubiti: 0
-    },
-    {
-        name: 'roma',
-        puntiFatti: 0,
-        falliSubiti: 0
-    },
-    {
-        name: 'juve',
-        puntiFatti: 0,
-        falliSubiti: 0
-    },
-]
-
-console.log(squadre);
-
-
-//Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
-
-function numeriRand () {
-    let numRandom = Math.floor(Math.random() * 20) + 1
+bici.forEach((bicicle,index,Array) => {
     
-    return numRandom
-}   
-numeriRand()
 
-
-squadre[0].puntiFatti = numeriRand()
-squadre[0].falliSubiti = numeriRand()
-squadre[1].puntiFatti = numeriRand()
-squadre[1].falliSubiti = numeriRand()
-squadre[2].puntiFatti = numeriRand()
-squadre[2].falliSubiti = numeriRand()
-squadre[3].puntiFatti = numeriRand()
-squadre[3].falliSubiti = numeriRand()
-squadre[4].puntiFatti = numeriRand()
-squadre[4].falliSubiti = numeriRand()
-console.log(squadre);
-
-
-
-
+    var filteredValue = bici.filter(function (item) {
+        return item.nome == "hbm" && item.peso < 20;
+    });
+    console.log(JSON.stringify(filteredValue));
+    text.innerHTML = ('la bici con il peso minore è:' + JSON.stringify(filteredValue))
+})
